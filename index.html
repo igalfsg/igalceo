@@ -10,6 +10,12 @@
 
 <style type="text/css">
 
+body {
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
 
 
 P.tableheader {text-align: center}
@@ -79,31 +85,38 @@ table.mytable3
     /*width: 850px;*/
     /*width: 950px;*/
     width: 1000px;
+    border-spacing: 0;
+    border-collapse: separate;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+table.mytable3 tr
+{
+    border-bottom: 2px solid #f0f0f0;
 }
 
 table.mytable3 th
 {
     text-align: left;
     font-family:sans-serif;
-    font-size:12pt;
-    vertical-align: top;
+    font-size:14pt;
+    vertical-align: middle;
     /* cellpadding: 0px; */
-    padding: 12px;
+    padding: 20px;
     padding-right: 4px;
     width: 60%; 
+    background-color: #fff;
 }
 
 table.mytable3 td
 {
-    text-align: left;
+    text-align: center;
     font-family: Ariel;
     font-size: 12pt;
     font-weight: bold;
-    vertical-align: top;
-    padding-top: 15px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    vertical-align: middle;
+    padding: 20px;
+    background-color: #fff;
     /*padding: 8px; */
 }
 
@@ -137,15 +150,19 @@ p.mypara1
 {
     text-align: center;
     font-family: sans-serif;
-    font-size: 18pt;
+    font-size: 32pt;
     font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
 }
 p.mypara12 
 {
     text-align: center;
     font-family: sans-serif;
-    font-size: 12   pt;
-    font-weight: bold;
+    font-size: 14pt;
+    font-weight: normal;
+    color: #666;
+    font-style: italic;
 }
 p.mypara2 
 {
@@ -197,9 +214,11 @@ hr.myhr1
 hr.myhr2
 {
 /*  width:62%;  */
-    width: 950px;
-    height:1px;
-    border: 4px solid red;
+    width: 1000px;
+    height:2px;
+    border: none;
+    border-top: 3px solid #d32f2f;
+    margin: 30px auto;
 }    
 
 /*  ***************** a **************** */
@@ -213,7 +232,16 @@ a.mya1
 a.mya2
 {
     font-family: Ariel;
-    font-size: 10pt;
+    font-size: 13pt;
+    text-decoration: none;
+    color: #1976d2;
+    transition: color 0.2s ease;
+}
+
+a.mya2:hover
+{
+    color: #d32f2f;
+    text-decoration: underline;
 }
 
 /*  ***************** img **************** */
@@ -229,7 +257,24 @@ div.mydiv3
     font-size: 10pt;
     line-height:110%;
     color:red;
-    background-color: rgb(255,255,255)
+    background-color: rgb(255,255,255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.mydiv3 img
+{
+    border: 3px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+div.mydiv3 img:hover
+{
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 div.mydiv4
@@ -284,45 +329,41 @@ Thanks for googling me, but why are you here? (Kinda Creepy)
 
 <tr>
 <th class="mytable3">
-<img src="red3dball.gif" alt = " * "> 
-<a class="mya2" HREF="https://microsoft.com"><B>I did a little bit of cryptography and security at MSFT </B></a>
+<img src="red3dball.gif" alt = " * " style="vertical-align: middle; margin-right: 10px;"> 
+<a class="mya2" HREF="https://microsoft.com"><B>I did a little bit of cryptography and security at MSFT</B></a>
 </th>
 <td class="mytable3">
 <div class="mydiv3">
-<img src="msft1.png" alt="Microsoft" style="width: 200px; height: auto;">
+<img src="msft1.png" alt="Microsoft" style="width: 220px; height: auto;">
 </div>
 </td>
 </tr>
 
 <tr>
 <th class="mytable3">
-<img src="red3dball.gif" alt = " * "> 
-<a class="mya2" HREF="https://codingflamingo.com"><B>I was a flamingo for a while </B></a>
+<img src="red3dball.gif" alt = " * " style="vertical-align: middle; margin-right: 10px;"> 
+<a class="mya2" HREF="https://codingflamingo.com"><B>I was a flamingo for a while</B></a>
 </th>
 <td class="mytable3">
 <div class="mydiv3">
-<img src="flamingo.jpg" alt="Coding Flamingo" style="width: 200px; height: auto;">
+<img src="flamingo.jpg" alt="Coding Flamingo" style="width: 220px; height: auto;">
 </div>
 </td>
 </tr>
 
 <tr>
 <th class="mytable3">
-<img src="red3dball.gif" alt = " * "> 
+<img src="red3dball.gif" alt = " * " style="vertical-align: middle; margin-right: 10px;"> 
 <a class="mya2" HREF="https://www.keytos.io"><B>I also did some cryptography and security at Keytos</B></a>
 </th>
 <td class="mytable3">
 <div class="mydiv3">
-<img src="keytos.jpg" alt="Keytos" style="width: 200px; height: auto;">
+<img src="keytos.jpg" alt="Keytos" style="width: 220px; height: auto;">
 </div>
 </td>
 </tr>
 
-<tr>
-<th>
-<br>
-</th>
-</tr>
+
 
 
 </table>
